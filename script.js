@@ -9,3 +9,16 @@ input.classList.add('inline-block-widgets');
 buttonCreateLetter.classList.add('inline-block-widgets');
 
 // código.
+
+function createLetter() {
+  pResult.innerHTML = '';
+  const textSplited = input.value.split(' ');
+  for (let indexWord = 0; indexWord < textSplited.length; indexWord += 1) {
+    const word = textSplited[indexWord];
+    const span = document.createElement('span');
+    span.innerText = word;
+    pResult.appendChild(span)
+  }
+}
+
+buttonCreateLetter.addEventListener('click', createLetter);
