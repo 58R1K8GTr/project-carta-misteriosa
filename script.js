@@ -10,8 +10,15 @@ buttonCreateLetter.classList.add('inline-block-widgets');
 
 // código.
 
+function containsOnlySpaces(string) {
+  return /^\s+$/.test(string);
+}
+
 function createLetter() {
   pResult.innerHTML = '';
+  if (!input.value || containsOnlySpaces(input.value)) {
+    pResult.innerText = 'Por favor, digite o conteúdo da carta.'
+  }
   const textSplited = input.value.split(' ');
   for (let indexWord = 0; indexWord < textSplited.length; indexWord += 1) {
     const word = textSplited[indexWord];
