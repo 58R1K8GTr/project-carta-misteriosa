@@ -1,0 +1,8 @@
+body {
+  background-color: green;
+}
+
+.inline-block-widgets {
+  background-color: aquamarine;
+  display: inline-block;
+}
