@@ -58,3 +58,7 @@ body {
 .skewright {
   transform: skewX(-10deg);
 }
+
+span {
+  margin-right: 10px;
+}
