@@ -2,6 +2,7 @@
 const input = document.querySelector('#carta-texto');
 const pResult = document.querySelector('#carta-gerada');
 const buttonCreateLetter = document.querySelector('#criar-carta');
+const pLetterCounter = document.querySelector('#carta-contador');
 
 // configurando elementos.
 buttonCreateLetter.innerText = 'criar carta';
@@ -50,6 +51,7 @@ function createLetter() {
     pResult.innerText = 'Por favor, digite o conteúdo da carta.'
   }
   const textSplited = input.value.split(' ');
+  pLetterCounter.innerText = textSplited.length;
   for (let indexWord = 0; indexWord < textSplited.length; indexWord += 1) {
     const word = textSplited[indexWord];
     const span = document.createElement('span');
