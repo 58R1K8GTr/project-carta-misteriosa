@@ -35,6 +35,15 @@ function randomClasses() {
   return chosenClasses;
 }
 
+function randomizeClasses(event) {
+  event.target.className = '';
+  const classes = randomClasses();
+  for (let indexClass = 0; indexClass < classes.length; indexClass += 1) {
+    const classChoiced = classes[indexClass];
+    event.target.classList.add(classChoiced);
+  }
+}
+
 function createLetter() {
   pResult.innerHTML = '';
   if (!input.value || containsOnlySpaces(input.value)) {
@@ -50,6 +59,7 @@ function createLetter() {
       const chosenClass = classes[indexClass];
       span.classList.add(chosenClass);
     }
+    span.addEventListener('click', randomizeClasses);
     pResult.appendChild(span)
   }
 }
