@@ -6,7 +6,7 @@
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
   },
   "devDependencies": {
-    "cypress": "^13.6.4",
+    "cypress": "^15.18.0",
     "cypress-multi-reporters": "^1.6.3",
     "eslint-config-trybe-fundamentals": "^1.1.1",
     "minimist": "^1.2.8",
